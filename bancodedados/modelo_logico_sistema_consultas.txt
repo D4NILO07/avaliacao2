@@ -1,0 +1,30 @@
+
+MODELO LÓGICO - SISTEMA DE CONSULTAS MÉDICAS
+
+TABELAS:
+
+1. PACIENTE
+   - id (PK)
+   - nome
+   - cpf (único)
+   - telefone
+
+2. MEDICO
+   - id (PK)
+   - nome
+   - especialidade
+   - crm (único)
+
+3. CONSULTA
+   - id (PK)
+   - id_paciente (FK → paciente.id)
+   - id_medico (FK → medico.id)
+   - data
+   - hora
+   - observacao
+
+RELACIONAMENTOS:
+
+- Um PACIENTE pode ter várias CONSULTAS (1:N)
+- Um MEDICO pode realizar várias CONSULTAS (1:N)
+- Cada CONSULTA está associada a um único PACIENTE e um único MEDICO
